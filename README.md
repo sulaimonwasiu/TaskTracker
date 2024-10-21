@@ -7,7 +7,7 @@ TaskTracker is a simple command-line interface (CLI) application for managing ta
 - Create new tasks
 - List all tasks or filter by status
 - Update task descriptions
-- Change task status (e.g., to "in-progress" or "done")
+- Change task status (e.g. From "todo" to "in-progress" or "done")
 - Delete tasks
 - Persistent storage using SQLite and JSON file storage
 
@@ -142,7 +142,7 @@ task-cli
 The application uses an SQLite database named `task.db` to store tasks. The database and table will be created automatically on the first run.
 
 ## Link
-[Project URL](https://github.com/sulaimonwasiu/TaskTracker)
+[Project URL](https://roadmap.sh/projects/task-tracker)
 
 ## Contributing
 
