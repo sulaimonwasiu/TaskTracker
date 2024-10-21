@@ -41,8 +41,11 @@ Each task should have the following properties:
    python --version
    ```
 
-3. Run the application:
+3. Run the application for both file and database storage:
 
+   ```bash
+   python app.py
+   ```
    ```bash
    python console.py
    ```
