@@ -141,6 +141,9 @@ task-cli
 
 The application uses an SQLite database named `task.db` to store tasks. The database and table will be created automatically on the first run.
 
+## Link
+[Project URL](https://github.com/sulaimonwasiu/TaskTracker/tree/master)
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions or improvements, feel free to create a pull request or open an issue.
