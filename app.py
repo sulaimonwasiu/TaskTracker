@@ -85,25 +85,25 @@ class TaskTracker(cmd.Cmd):
             self.save_tasks()
             print('Task updated successfully!')
 
+    def update_status(self, id, status):
+        """Helper function to update status"""
+        task = self.validate_task(id)
+        if task:
+            task['status'] = status
+            task['updated_at'] = datetime.datetime.now().isoformat()
+            self.save_tasks()
+            print(f'Task marked as {status}.')
+
     def do_mark_in_progress(self, arg):
         """Mark task as in-progress. Usage: mark_in_progress <task_id>"""
         task_id = int(arg)
-        task = self.validate_task(task_id)
-        if task:
-            task['status'] = 'in-progress'
-            task['updated_at'] = datetime.datetime.now().isoformat()
-            self.save_tasks()
-            print('Task marked as in-progress.')
+        self.update_status(task_id, "in-progress")
 
     def do_mark_done(self, arg):
         """Mark task as done. Usage: mark_done <task_id>"""
         task_id = int(arg)
-        task = self.validate_task(task_id)
-        if task:
-            task['status'] = 'done'
-            task['updated_at'] = datetime.datetime.now().isoformat()
-            self.save_tasks()
-            print('Task marked as done.')
+        self.update_status(task_id, "done")
+
 
     def do_exit(self, arg):
         """Exit the application. Usage: exit"""
